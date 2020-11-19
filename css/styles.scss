@@ -3,8 +3,8 @@
 $colors: (
     primary: #FFD3B5,
     primary-light: lighten(#FFD3B5, 6%),
-    accent: #CD5C5C,
-    accent2: #fff
+    heading: #CD5C5C,
+    
 );
 
 $font-heading: 'Abril Fatface', cursive;
@@ -25,7 +25,22 @@ $phone: 600px;
     }
 }
 
+h1 {
+    padding: 30px;
+}
+.col-md{
+    margin-top: 100px;
+}
 
+.card {
+    padding: 30px;
+    margin:  0 20px 30px 20px;
+}
+.card img {
+    height:auto; 
+    width: 30vw;
+    margin: 0 auto;
+}
 // body { 
 //     background-color: color(primary);
 // }
