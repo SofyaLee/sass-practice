@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
+
 $colors: (
     primary: #FFD3B5,
     primary-light: lighten(#FFD3B5, 6%),
-    heading: #CD5C5C,
+    accent: #CD5C5C,
     
 );
-$heading-color: #CD5C5C;
+$light-primary-color: lighten(#FFD3B5, 7%);
+$primary-color: #FFD3B5;
+$accent-color: #CD5C5C;
+$light-accent-color: lighten(#CD5C5C, 10%);
 $font-heading: 'Abril Fatface', cursive;
 $tablet: 900px;
 $phone: 600px;
@@ -17,51 +21,96 @@ $phone: 600px;
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
+@mixin tablet {
+        @media (max-width: #{$tablet}) {
+            @content;
+        }
+    }
+    @mixin phone {
+        @media (max-width: #{$phone}) {
+            @content;
+        }
+    }
 
 
 
 
+body {
+    background-color: $primary-color !important;
+}
 
-// @function color($color-name) {
-//     @return map-get($colors, $color-name);
-// }
-// @mixin tablet {
-//     @media (max-width: #{$tablet}) {
-//         @content;
-//     }
-// }
-// @mixin phone {
-//     @media (max-width: #{$phone}) {
-//         @content;
-//     }
-// }
+
 h1 {
     padding-top: 30px;
+    margin-top: 50px;
   }
   
   h1, h2, h3 {
-    color: #CD5C5C;
+    color: $accent-color;
     font-style: "Abril Fatface", cursive;
   }
-  
+
+  h1, h2 {
+    font-family: $font-heading;
+  }
+  h3 {
+      padding: 20px;
+      text-align: left;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+  }
   .col-md {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   
   .card {
-    padding: 30px;
+    padding: 10px 30px;
     margin: 0 20px 30px 20px;
         img {
             height: auto;
             width: 30vw;
             margin: 0 auto;
+            @include tablet {
+                width: 80vw;
+            }
         }
   }
-  
-  img {
-    min-width: 350px;
-    @include border-radius(10px);
+  p {
+      padding: 20px 0;
+      margin: 0;
   }
+  img {
+      padding: 10px 0;
+    min-width: 350px;
+    align-self: center;
+    @include border-radius(10px);
+    
+  }
+  ul {
+      color: $light-accent-color;
+      list-style-type: none;
+      padding: 0;
+  }
+ .about-me {
+    @include border-radius(10px);
+    padding: 30px;
+    background-color: $light-primary-color;
+        @include tablet {
+            @include border-radius(10px);
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $light-primary-color;
+        }
+    }
+    footer {
+
+            font-style: italic;
+            color: $accent-color; 
+        }
+    
 // body { 
 //     background-color: color(primary);
 // }
@@ -122,15 +171,7 @@ h1 {
 //     margin: 30px;
 //       box-shadow: 5px 5px 10px grey;
 // }
-// .me {
-//     @include tablet {
-//         width: 45%;
-//     }
-//     @include phone {
-//         width: 70%;
-//     }
-// }
-
+// 
 // .left {
 //     width: 350px;
 //     padding: 20px;

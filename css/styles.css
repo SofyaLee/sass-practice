@@ -1,14 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+body {
+  background-color: #FFD3B5 !important;
+}
+
 h1 {
-  padding: 30px;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+
+h1, h2, h3 {
+  color: #CD5C5C;
+  font-style: "Abril Fatface", cursive;
+}
+
+h1, h2 {
+  font-family: "Abril Fatface", cursive;
+}
+
+h3 {
+  padding: 20px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 
 .col-md {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .card {
-  padding: 30px;
+  padding: 10px 30px;
   margin: 0 20px 30px 20px;
 }
 
@@ -16,5 +37,63 @@ h1 {
   height: auto;
   width: 30vw;
   margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .card img {
+    width: 80vw;
+  }
+}
+
+p {
+  padding: 20px 0;
+  margin: 0;
+}
+
+img {
+  padding: 10px 0;
+  min-width: 350px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 10px;
+}
+
+ul {
+  color: #d98383;
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-me {
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #ffe8d9;
+}
+
+@media (max-width: 900px) {
+  .about-me {
+    border-radius: 10px;
+    padding: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #ffe8d9;
+  }
+}
+
+footer {
+  font-style: italic;
+  color: #CD5C5C;
 }
 /*# sourceMappingURL=styles.css.map */
