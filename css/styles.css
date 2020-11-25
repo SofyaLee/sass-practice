@@ -1,80 +1,202 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+caption {
+  caption-side: top;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  background-color: #FFD3B5 !important;
+  background-color: #ffe0d9 !important;
 }
 
-h1 {
-  padding-top: 30px;
-  margin-top: 50px;
+.navbar {
+  background-color: #d98383;
+  color: #ffe0d9;
 }
 
-h1, h2, h3 {
-  color: #CD5C5C;
-  font-style: "Abril Fatface", cursive;
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-h1, h2 {
-  font-family: "Abril Fatface", cursive;
+header {
+  height: 150px;
+  border-bottom: 1px solid white;
+  background-color: #ffc9bc;
 }
 
-h3 {
-  padding: 20px;
-  text-align: left;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
-}
-
-.col-md {
-  margin-top: 50px;
-}
-
-.card {
-  padding: 10px 30px;
-  margin: 0 20px 30px 20px;
-}
-
-.card img {
-  height: auto;
-  width: 30vw;
-  margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-  .card img {
-    width: 80vw;
+@media (max-width: 990px) {
+  header {
+    height: 120px;
   }
 }
 
-p {
-  padding: 20px 0;
-  margin: 0;
+@media (max-width: 600px) {
+  header {
+    height: 80px;
+  }
 }
 
-img {
-  padding: 10px 0;
-  min-width: 350px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border-radius: 10px;
+h1 {
+  padding-top: 25px;
+  margin-top: 150px;
+  color: #CD5C5C;
 }
 
-ul {
+@media (max-width: 990px) {
+  h1 {
+    font-size: 50px !important;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 35px !important;
+    padding-top: 15px;
+  }
+}
+
+h1, h2, h3 {
+  font-family: "Abril Fatface", cursive;
+}
+
+h2 {
+  font-size: 40px !important;
+  padding: 30px 0 20px 0;
+  text-align: center;
   color: #d98383;
-  list-style-type: none;
-  padding: 0;
 }
 
-.about-me {
-  border-radius: 10px;
-  padding: 30px;
-  background-color: #ffe8d9;
+@media (max-width: 990px) {
+  h2 {
+    font-size: 30px !important;
+  }
 }
 
-@media (max-width: 900px) {
-  .about-me {
-    border-radius: 10px;
-    padding: 50px;
+@media (max-width: 600px) {
+  h2 {
+    font-size: 25px !important;
+    padding: 5px 0 5px 0;
+    color: #CD5C5C;
+  }
+}
+
+nav {
+  height: 50px;
+}
+
+nav p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+@media (max-width: 990px) {
+  nav p {
+    display: none;
+  }
+}
+
+nav .btn {
+  color: #ffe0d9;
+  margin-left: 5px;
+}
+
+@media (max-width: 990px) {
+  nav .btn {
+    position: relative;
+    bottom: 12px;
+    margin: 0 10px;
+  }
+}
+
+nav a {
+  color: #ffe0d9;
+}
+
+@media (max-width: 990px) {
+  nav a {
+    position: relative;
+    bottom: 8px;
+    margin: 0 10px;
+  }
+}
+
+nav a:hover {
+  color: #b1395d;
+}
+
+nav .btn:hover {
+  background-color: #b1395d;
+  color: #ffe0d9;
+}
+
+nav i {
+  font-size: 1.5rem;
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
+
+@media (max-width: 990px) {
+  .container-fluid {
+    max-width: 700px;
+  }
+}
+
+.home:first-of-type {
+  margin: 30px 0;
+  padding: 50px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home:first-of-type img {
+  width: 430px;
+}
+
+@media (max-width: 990px) {
+  .home:first-of-type img {
+    width: 45vw;
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home:first-of-type img {
+    width: 75vw;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 990px) {
+  .home:first-of-type {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -88,12 +210,212 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #ffe8d9;
   }
 }
 
+@media (max-width: 600px) {
+  .home:first-of-type {
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.about p {
+  width: 450px;
+  line-height: 35px;
+  font-size: 16px;
+}
+
+@media (max-width: 990px) {
+  .about p {
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about p {
+    padding: 0 30px;
+    text-align: center;
+  }
+}
+
+.home {
+  padding: 50px 0;
+}
+
+.about-secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-secondary img {
+  height: 400px;
+}
+
+@media (max-width: 990px) {
+  .about-secondary img {
+    height: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-secondary img {
+    height: 350px;
+  }
+}
+
+.about-secondary p {
+  line-height: 35px;
+  font-size: 16px;
+  padding: 10px 45px;
+}
+
+@media (max-width: 990px) {
+  .about-secondary p {
+    width: 700px !important;
+    text-align: center;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-secondary p {
+    width: 425px !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .about-secondary {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 990px) {
+  .home:nth-of-type(2), .home:nth-of-type(3) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  .surf {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.list {
+  border-radius: 10px;
+  background-color: #CD5C5C;
+  padding: 30px;
+}
+
+@media (max-width: 990px) {
+  .list {
+    width: 500px !important;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .list {
+    width: 300px !important;
+  }
+}
+
+.list ul, .list h3 {
+  font-size: 25px;
+  padding: 5px 20px 10px 20px;
+  color: white;
+}
+
+.list ul {
+  list-style-type: none;
+}
+
+.list ul li {
+  font-size: 20px;
+}
+
+.list ul i {
+  color: #ffc9bc;
+}
+
 footer {
+  padding-top: 70px;
   font-style: italic;
   color: #CD5C5C;
+}
+
+.fa-paw {
+  padding: 0 2px;
+}
+
+.store-header {
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.main-container {
+  margin-top: 50px;
+}
+
+.main-container h2 {
+  padding: 35px;
+}
+
+label, legend {
+  color: #CD5C5C;
+}
+
+.form-group .btn {
+  color: #CD5C5C;
+  border: 1px solid;
+}
+
+.form-group .btn:hover {
+  background-color: #d98383;
+  color: #FFD3B5;
 }
 /*# sourceMappingURL=styles.css.map */

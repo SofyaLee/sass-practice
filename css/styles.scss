@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-
-
+caption {
+    caption-side: top;
+}
 $colors: (
     primary: #FFD3B5,
     primary-light: lighten(#FFD3B5, 6%),
     accent: #CD5C5C,
     
 );
-$light-primary-color: lighten(#FFD3B5, 7%);
+$light-primary-color: lighten(#ffc4b5, 7%);
 $primary-color: #FFD3B5;
 $accent-color: #CD5C5C;
 $light-accent-color: lighten(#CD5C5C, 10%);
 $font-heading: 'Abril Fatface', cursive;
-$tablet: 900px;
+$tablet: 990px;
 $phone: 600px;
 
 @mixin border-radius($radius) {
@@ -33,84 +34,283 @@ $phone: 600px;
     }
 
 
-
-
-body {
-    background-color: $primary-color !important;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    background-color: $light-primary-color !important;
+}
+.navbar {
+    background-color: $light-accent-color ;
+    color: $light-primary-color;
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+    }
+}
 
+header {
+    height: 150px;
+    border-bottom: 1px solid white;
+    background-color: rgb(255, 201, 188);
+    @include tablet {
+        height: 120px;
+    }
+    @include phone {
+        height: 80px;
+    }
+}
 h1 {
-    padding-top: 30px;
-    margin-top: 50px;
+    padding-top: 25px;
+    margin-top: 150px;
+    color: $accent-color;
+    @include tablet {
+        font-size: 50px !important;
+        padding-top: 25px;
+    }
+    @include phone {
+        font-size: 35px !important;
+        padding-top: 15px;
+    }
   }
   
-  h1, h2, h3 {
-    color: $accent-color;
-    font-style: "Abril Fatface", cursive;
-  }
-
-  h1, h2 {
+  h1, h2,h3 {
+    
     font-family: $font-heading;
   }
-  h3 {
-      padding: 20px;
-      text-align: left;
-      font-family: 'Times New Roman', Times, serif;
-      font-style: italic;
-  }
-  .col-md {
-    margin-top: 50px;
-  }
-  
-  .card {
-    padding: 10px 30px;
-    margin: 0 20px 30px 20px;
-        img {
-            height: auto;
-            width: 30vw;
-            margin: 0 auto;
-            @include tablet {
-                width: 80vw;
-            }
-        }
-  }
-  p {
-      padding: 20px 0;
-      margin: 0;
-  }
-  img {
-      padding: 10px 0;
-    min-width: 350px;
-    align-self: center;
-    @include border-radius(10px);
-    
-  }
-  ul {
+  h2 {
+      font-size: 40px !important;
+      padding: 30px 0 20px 0;
+      text-align: center;
       color: $light-accent-color;
-      list-style-type: none;
-      padding: 0;
+      @include tablet {
+        font-size: 30px !important;
+    }
+    @include phone {
+        font-size: 25px !important;
+        padding: 5px 0 5px 0;
+        color: $accent-color;
+    }
   }
- .about-me {
-    @include border-radius(10px);
-    padding: 30px;
-    background-color: $light-primary-color;
+  nav {
+      height: 50px;
+
+      p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      margin-top: 15px;
+      @include tablet{
+          display: none;
+      }
+    }
+    .btn {
+        color: $light-primary-color;
+        margin-left: 5px;
         @include tablet {
-            @include border-radius(10px);
-            padding: 50px;
+            position: relative;
+            bottom:12px;
+            margin: 0 10px;
+        }
+    }
+ 
+    a {
+        color: $light-primary-color;
+        @include tablet {
+            position: relative;
+            bottom:8px;
+            margin: 0 10px;
+        }
+    }
+    a:hover {
+        color: rgb(177, 57, 93);
+      }
+      .btn:hover {
+        background-color: rgb(177, 57, 93);
+        color: $light-primary-color;
+      }
+    i {
+        font-size: 1.5rem;
+    }
+  }
+.container-fluid {
+    max-width: 1200px;
+    @include tablet {
+        max-width: 700px;
+    }
+}
+.home:first-of-type {
+      margin: 30px 0;
+      padding: 50px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      img {
+          width: 430px;
+          @include tablet {
+            width: 45vw;
+            min-width: 400px;
+            }
+            @include phone {
+                width: 75vw;
+                min-width: 300px;
+                
+                }
+      }
+      @include tablet {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: $light-primary-color;
+    }
+    @include phone {
+        background-color: transparent;
+        padding: 10px;
+        margin-bottom: 0;
+        }
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    p{
+        width: 450px;
+        line-height: 35px;
+        font-size: 16px;
+        @include tablet {
+            line-height: 30px;
+            }
+            @include phone {
+                padding: 0 30px;
+                text-align: center;
+            }
+    }
+ 
+
+}
+
+.home {
+    padding: 50px 0;
+
+}
+.about-secondary {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    img{
+        height: 400px;
+        @include tablet {
+            height: 450px;
+            }
+            @include phone {
+            height: 350px;
+            }
+    }
+    p {
+        line-height: 35px;
+        font-size: 16px;
+        padding: 10px 45px;
+        @include tablet {
+            width: 700px !important;
+            text-align: center;
+            padding-top: 25px;
+            }
+            @include phone {
+                width: 425px !important;
+                }
+    }
+    @include tablet {
+        flex-direction: column-reverse;
+        align-items: center;
+        }
+}
+.home:nth-of-type(2), .home:nth-of-type(3) {
+    @include tablet {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0;
+        padding-top: 20px;
+        }
+}
+ .surf {
+    @include tablet {
+        flex-direction: column;
+    }
+ } 
+
+
+.list {
+    border-radius: 10px;
+    background-color: $accent-color;
+    padding: 30px;
+    @include tablet {
+        width: 500px !important;
+        align-self: center;
+        margin-bottom: 50px
+        }
+        @include phone {
+            width: 300px !important;
+            
+        }
+    ul, h3 {
+        font-size: 25px;
+        padding: 5px 20px 10px 20px;
+        color: white;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            font-size: 20px;
+        }
+        i {
+            color: rgb(255, 201, 188); 
         }
     }
-    footer {
+}
 
+footer {
+padding-top: 70px;
             font-style: italic;
-            color: $accent-color; 
-        }
+            color: $accent-color;
+
+
+
+}
+.fa-paw {
+    padding: 0 2px;
+}
+.store-header {
+    padding: 10px;
+    margin-top: 50px;
+}
+.main-container {
+    margin-top: 50px;
+    h2 {
+        padding: 35px;
+    }
     
+}
+
+label, legend {
+    color: $accent-color;
+}
+.form-group {
+    .btn{
+        color: $accent-color;
+        border: 1px solid;
+    }
+    .btn:hover {
+        background-color: $light-accent-color;
+        color: $primary-color;
+    }
+}
 // body { 
 //     background-color: color(primary);
 // }
